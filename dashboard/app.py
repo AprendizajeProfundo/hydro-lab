@@ -34,7 +34,7 @@ with st.sidebar:
 
 session=st.session_state.session
 cfg=st.session_state.config
-tab1,tab2,tab3,tab4=st.tabs(['Operar la red','Evolución y episodios','Comparar controladores','Robot de inspección'])
+tab1,tab2,tab3,tab4,tab5=st.tabs(['Operar la red','Evolución y episodios','Comparar controladores','Robot de inspección','Aprendizaje por refuerzo · PPO'])
 
 def network_figure(record):
     f=go.Figure()
@@ -201,3 +201,8 @@ with tab4:
 
 st.divider()
 st.caption('S2.8: integración experimental de estimaciones y control · S2.7: robot discreto, observación activa y costos de inspección · Motor hidráulico S2.1–S2.5 sin modificaciones · Datos sintéticos, no calibrados con operación industrial · Diagnósticos verdaderos solo para evaluación, no para políticas')
+
+
+with tab5:
+    import ppo_tab as s211_ppo_tab
+    s211_ppo_tab.render()

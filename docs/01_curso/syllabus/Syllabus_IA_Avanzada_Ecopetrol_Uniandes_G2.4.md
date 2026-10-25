@@ -7,7 +7,7 @@
 **Contexto académico:** Ecopetrol — Universidad de los Andes
 **Modalidad:** Presencial, sede Universidad de los Andes
 **Duración:** 8 horas presenciales distribuidas en dos jornadas de 4 horas; 440 minutos académicos y 40 minutos de pausas
-**Docente y autor:** Álvaro Montenegro
+**Docente y autor:** Alvaro Montenegro
 **Cargo:** CEO, Learning Systems Institute (LSI) y Aprendizaje Profundo SAS
 **Correo electrónico:** ammontenegrod@gmail.com
 **Celular:** +57 300 571 2192
@@ -368,7 +368,7 @@ Las versiones G0.2, G2.1, G2.2 y G2.3 permanecen como antecedentes históricos y
 
 ---
 
-**Álvaro Montenegro**
+**Alvaro Montenegro**
 CEO — Learning Systems Institute (LSI) y Aprendizaje Profundo SAS
 Docente y autor de la propuesta académica
 **Correo:** ammontenegrod@gmail.com

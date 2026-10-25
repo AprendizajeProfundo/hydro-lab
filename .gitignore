@@ -23,3 +23,7 @@ results/
 /sprints/
 
 /resultados/
+
+# Copias temporales de respaldo
+*_backup
+*_old.png

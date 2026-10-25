@@ -8,6 +8,7 @@ from __future__ import annotations
 from dataclasses import dataclass, asdict
 import numpy as np
 from .control_center import EpisodeSession
+from .termination_diagnostics import summarize_terminations
 
 @dataclass(frozen=True)
 class ActiveResult:
@@ -22,6 +23,7 @@ class ActiveResult:
     interventions: int
     inspections: int
     terminated: bool
+    termination_reason: str | None = None
 
 
 def run_active_episode(seed: int, *, policy: str='health_aware', robot_policy: str='uncertainty', max_steps: int=96) -> ActiveResult:
@@ -32,7 +34,10 @@ def run_active_episode(seed: int, *, policy: str='health_aware', robot_policy: s
         return ActiveResult(seed, policy, robot_policy, len(session.records),
             report['reward_total'], session.robot.cost_um,
             report['total_energy_kwh'], report['total_unserved_m3'],
-            report['interventions'], session.robot.inspections, session.terminated)
+            report['interventions'], session.robot.inspections, session.terminated,
+            (report.get('termination_reason') or next(
+                (rec.get('termination_reason') for rec in reversed(session.records)
+                 if rec.get('terminated') and rec.get('termination_reason')), None)))
     finally:
         session.close()
 
@@ -57,6 +62,7 @@ def active_paired_benchmark(seeds: tuple[int,...], *, max_steps: int=96) -> dict
         subset=[v for v in rows if (v.policy,v.robot_policy)==(p,r)]
         summary[f'{p}/{r}']={k:float(np.mean([getattr(v,k) for v in subset]))
             for k in ('net_reward_um','robot_cost_um','energy_kwh','unserved_m3','interventions','inspections','terminated','steps')}
+        summary[f'{p}/{r}']['termination_diagnostics'] = summarize_terminations([asdict(v) for v in subset])
     return {'schema':'hydro-lab-s2.8-paired-v1','seeds':list(seeds),'max_steps':max_steps,
         'summary':summary,'primary_contrast':'health_aware/uncertainty minus health_aware/off',
         'paired_net_reward_differences_um':differences.tolist(),

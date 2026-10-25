@@ -1,16 +1,39 @@
-# Documentación de Hydro-Lab G2.4 / S2.10
+# Documentación de Hydro-Lab G2.4 / S2.11
 
-La organización distingue el diseño académico, los fundamentos, el laboratorio, las actividades y los documentos para instructores. Los archivos originales conservan sus nombres y generaciones.
+Hydro-Lab es un laboratorio educativo de inteligencia artificial avanzada para una red sintética de transporte de hidrocarburos.
 
-- [01_curso — syllabus](01_curso/syllabus/Syllabus_IA_Avanzada_Ecopetrol_Uniandes_G2.3.md)
-- [02_fundamentos — diseño científico](02_fundamentos/diseno_cientifico/Laboratorio_Red_Inteligente_Hidrocarburos_Diseno_Cientifico_G2.3.md)
-- [03_laboratorio — manual de uso](03_laboratorio/manuales/Manual_Hydro_Lab_S2.10_V2-0.md)
-- [03_laboratorio — fundamentos físicos para estudiantes](03_laboratorio/manuales/Guia_Estudiantes_Fisica_y_Objetivo_Laboratorio_G2.4.md)
-- [03_laboratorio — especificación matemática y computacional](03_laboratorio/arquitectura/Red_Hidrocarburos_Especificacion_Matematica_Computacional_G2.4.md)
-- [historico — notas de sprints](historico/sprints_documentacion/)
+La documentación distingue el diseño académico, los fundamentos científicos, el laboratorio, las lecciones, los materiales de desarrollo y los antecedentes históricos.
 
-Las carpetas `04_actividades`, `05_instructores` y `06_referencias` están preparadas para incorporar los materiales revisados por el autor. **No se han creado syllabus nuevos ni materiales académicos ficticios.**
+## Materiales del curso
 
-## Figuras del manual
+- [Syllabus G2.4](01_curso/syllabus/Syllabus_IA_Avanzada_Ecopetrol_Uniandes_G2.4.md)
+- [Lecciones y cuadernos Jupyter](01_curso/lecciones/Cuadernos/)
+- [Manual Hydro-Lab S2.11 G3.1](03_laboratorio/manuales/Manual_Hydro_Lab_S2.11_G3.1.md)
+- [Guía de estudiantes S2.11 G3.4](03_laboratorio/manuales/Guia_Estudiantes_Hydro_Lab_S2.11_G3.4.md)
 
-Las figuras reales se guardan junto al manual, en `03_laboratorio/manuales/imagenes/`. El inventario de referencias y archivos no disponibles se encuentra en `AUDITORIA_PUBLICACION.md` en la raíz del proyecto.
+## Fundamentos y arquitectura
+
+- [Diseño científico G2.3](02_fundamentos/diseno_cientifico/Laboratorio_Red_Inteligente_Hidrocarburos_Diseno_Cientifico_G2.3.md)
+- [Especificación matemática y computacional G2.4](03_laboratorio/arquitectura/Red_Hidrocarburos_Especificacion_Matematica_Computacional_G2.4.md)
+
+## Desarrollo técnico
+
+- [Documentación de PPO S2.11](06_desarrollo/S2.11_PPO/)
+- [Documentación de recompensas S2.10](06_desarrollo/S2.10_Recompensas/)
+
+## Documentación histórica
+
+- [Antecedentes de sprints](historico/sprints_documentacion/)
+- [Lecciones anteriores de PPO](historico/lecciones_PPO/)
+
+## Figuras
+
+Las imágenes del manual se encuentran en `03_laboratorio/manuales/imagenes/`.
+
+Las imágenes de las lecciones se encuentran en `01_curso/lecciones/Imagenes/`.
+
+## Alcance
+
+El laboratorio utiliza una red sintética. No representa una instalación industrial real ni utiliza datos operacionales de Ecopetrol.
+
+Los documentos conservan sus identificadores de generación para mantener la trazabilidad de su evolución.

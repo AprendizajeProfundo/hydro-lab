@@ -32,7 +32,7 @@ def _checkpoints():
         (p / f).is_file() for f in ('ppo_model.zip', 'normalization.pkl', 'metadata.json'))}
 
 
-def _graph(df, title, x_candidates=('timesteps', 'total_timesteps', 'step', 'steps')):
+def _graph(df, title, x_candidates=('timesteps', 'total_timesteps', 'step', 'steps'), *, key_prefix='graph'):
     if df is None or df.empty:
         st.caption(f'{title}: todavía no hay datos disponibles.')
         return
@@ -44,8 +44,8 @@ def _graph(df, title, x_candidates=('timesteps', 'total_timesteps', 'step', 'ste
     y = [c for c in numeric if c != x and any(t in c.lower() for t in
          ('reward', 'return', 'loss', 'value', 'entropy', 'kl', 'explained', 'energy', 'unserved'))]
     if x and y:
-        chosen = st.selectbox(f'Indicador · {title}', y, key=f'plot_selector_{title}_{st.session_state.get("s211_history_model", "current")}')
-        st.plotly_chart(px.line(df, x=x, y=chosen, markers=True, title=f'{title}: {chosen}'), use_container_width=True, key=f'plot_line_{title}_{st.session_state.get("s211_history_model", "current")}')
+        chosen = st.selectbox(f'Indicador · {title}', y, key=f'plot_selector_{key_prefix}_{title}')
+        st.plotly_chart(px.line(df, x=x, y=chosen, markers=True, title=f'{title}: {chosen}'), use_container_width=True, key=f'plot_line_{key_prefix}_{title}')
 
 
 def _run_folder():
@@ -85,7 +85,7 @@ def _show_progress():
         df = _csv(folder / 'checkpoint' / filename)
         if df is not None:
             with st.expander(title, expanded=filename.startswith('validation')):
-                _graph(df, title)
+                _graph(df, title, key_prefix='live')
 
 
 def _training():
@@ -205,7 +205,7 @@ def _history():
                                 ('ppo_diagnostics.csv', 'Diagnósticos PPO'),
                                 ('episodes_training.csv', 'Episodios de entrenamiento')]:
             with st.expander(title, expanded=filename.startswith('validation')):
-                _graph(_csv(folder / filename), title)
+                _graph(_csv(folder / filename), title, key_prefix=f'history_{chosen}')
     st.markdown('#### Diagnóstico multisemilla existente')
     _comparison(DIAGNOSTICS, context='historical_multiseed')
     if RUNS.is_dir():

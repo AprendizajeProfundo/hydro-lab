@@ -16,7 +16,15 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10"]
+ppo = ["stable-baselines3>=2.3,<3", "torch>=2.2,<3"]
 ui = ["streamlit>=1.35,<2", "plotly>=5.20,<7", "pandas>=2.2,<3"]
+
+course = [
+    "matplotlib>=3.8,<4",
+    "scikit-learn>=1.4,<2",
+    "jupyterlab>=4,<5",
+    "ipykernel>=6,<8",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]

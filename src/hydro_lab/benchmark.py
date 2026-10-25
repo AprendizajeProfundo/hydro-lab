@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 import numpy as np
 from .environment import HydroLabEnv
+from .termination_diagnostics import summarize_terminations
 from .observations import OBSERVATION_NAMES
 
 Policy = Callable[[np.ndarray], np.ndarray]
@@ -150,6 +151,7 @@ def paired_benchmark(seeds: tuple[int,...], policies: tuple[str,...] = ('constan
             'mean_unserved_m3': float(np.mean([r.unserved_m3 for r in rows])),
             'mean_interventions': float(np.mean([r.interventions for r in rows])),
             'terminal_rate': float(np.mean([r.terminated for r in rows])),
+            'termination_diagnostics': summarize_terminations([asdict(r) for r in rows]),
         }
     a,b = policies[:2]
     by_key = {(r.seed,r.policy): r for r in results}

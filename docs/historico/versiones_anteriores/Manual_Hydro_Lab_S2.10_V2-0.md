@@ -120,20 +120,35 @@ Vamos a comenzar sin complicaciones: el controlador automático tomará las prim
 
 Hydro-Lab se utiliza desde un navegador, pero su simulación se ejecuta localmente. Puedes obtener la versión del curso desde GitHub descargando un ZIP o clonando el repositorio. La aplicación está diseñada para Windows, macOS y Linux y utiliza **Python 3.12**. Para evitar conflictos con otros proyectos, instala sus dependencias en un entorno virtual exclusivo.
 
-### 2.1 Obtener el proyecto desde GitHub
 
-Entra al repositorio **`hydro-lab` de la organización Aprendizaje Profundo** mediante el enlace oficial que te entregue el instructor. Selecciona la versión del curso **G2.4 / S2.10** en *Releases* o *Tags*, cuando esté publicada.
 
-**Opción A — Descargar sin Git (recomendada para principiantes).** En GitHub, abre la versión publicada y descarga su archivo ZIP; descomprímelo en una carpeta de tu elección. Si trabajas desde la rama principal, también puedes utilizar **Code → Download ZIP**, teniendo presente que esa rama puede cambiar.
+### 2.1. Obtener Hydro-Lab desde GitHub
 
-**Opción B — Clonar con Git (usuarios avanzados).** Copia la URL HTTPS que muestra **Code → HTTPS** y ejecútala en una terminal:
+El código fuente y la documentación de Hydro-Lab se encuentran en el repositorio oficial de Aprendizaje Profundo:
+
+**[Repositorio oficial de Hydro-Lab](https://github.com/AprendizajeProfundo/hydro-lab)**
+
+Para obtener el laboratorio existen dos alternativas.
+
+**Opción A. Descargar el proyecto como ZIP**
+
+1. Abre el repositorio en GitHub.
+2. Pulsa el botón verde **Code**.
+3. Selecciona **Download ZIP**.
+4. Descomprime el archivo en una carpeta de tu computador.
+
+**Opción B. Clonar el repositorio (usuarios avanzados)**
+
+Si tienes Git instalado, abre una terminal y ejecuta:
 
 ```bash
-git clone URL_HTTPS_DEL_REPOSITORIO
+git clone https://github.com/AprendizajeProfundo/hydro-lab.git
 cd hydro-lab
 ```
 
-En la opción A, abre una terminal en la carpeta que acabas de descomprimir. En ambas opciones, los comandos siguientes se ejecutan desde la carpeta principal, que contiene `pyproject.toml` y `dashboard/`.
+Ambas alternativas proporcionan los archivos necesarios para instalar y ejecutar el laboratorio. A continuación, se explica cómo preparar el entorno Python y sus dependencias.
+
+
 
 ### 2.2 Crear un entorno virtual e instalar Hydro-Lab
 
@@ -224,12 +239,9 @@ Hydro-Lab tiene **una barra lateral** y **cuatro pestañas**. La barra lateral f
 
 Si la barra lateral no aparece, expándela desde el control de Streamlit en el borde izquierdo; el icono puede variar con la versión.
 
-**FIGURA M-03 — Mapa general**  
-**Archivo:** `imagenes/M-03-pantalla-general.png`  
-**Qué debe mostrar la figura:** aplicación recién abierta, con barra lateral expandida y las cuatro pestañas visibles.  
-**Pie:** *Una configuración compartida; cuatro formas de explorar el mismo episodio.*
 
 ![Figura de Hydro-Lab](imagenes/M-03-pantalla-general.png)
+*Figura M-03. mapa general de la aplicación.*
 
 ## 4. La barra lateral: cinco decisiones antes de comenzar
 
@@ -245,12 +257,10 @@ Si la barra lateral no aparece, expándela desde el control de Streamlit en el b
 
 **Regla fundamental:** cambiar cualquiera de estos selectores **no altera el episodio que ya está corriendo**. Para aplicar la configuración nueva, pulsa **Crear / reiniciar episodio**. Eso reemplaza el episodio activo; descarga los datos antes si deseas conservarlos.
 
-**FIGURA M-04 — Configuración del episodio**  
-**Archivo:** `imagenes/M-04-barra-lateral.png`  
-**Qué debe mostrar la figura:** barra lateral completa con los cinco controles y el botón de creación; usa una ventana suficientemente alta o dos capturas si no cabe.  
-**Pie:** *El episodio comienza con una decisión de diseño experimental.*
 
 ![Figura de Hydro-Lab](imagenes/M-04-barra-lateral.png)
+
+*Figura M-04. barra lateral de la aplicación. El episodio comienza con una decisión de diseño experimental.**
 
 ### Antes de cada recorrido: ficha de configuración
 

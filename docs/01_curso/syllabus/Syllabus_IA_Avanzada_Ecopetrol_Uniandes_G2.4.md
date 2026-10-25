@@ -22,7 +22,7 @@ Los ocho cuadernos constituyen el material docente de esta edición. **Los enlac
 
 | Jornada | Sesión | Cuaderno y tema | Tiempo | Abrir cuaderno (local y GitHub) |
 |---|---|---|---:|---|
-| 1 · 27 oct. | 1 | **101. Fundamentos de MDP y decisiones secuenciales** | 55 min | [Abrir 101](../lecciones/Cuadernos/101_ar_MDP_Fundamentos_v1_1.ipynb) |
+| 1 · 27 oct. | 1 | **101. Fundamentos de MDP y decisiones secuenciales** | 55 min | [Abrir 101](../lecciones/Cuadernos/101_ar_MDP_Fundamentos.ipynb) |
 | 1 · 27 oct. | 1 | **102. Q-learning y Deep Q-Networks (DQN)** | 55 min | [Abrir 102](../lecciones/Cuadernos/102_ar_Q_Learning_DQN.ipynb) |
 | 1 · 27 oct. | 2 | **103. Gradientes de política y Actor-Crítico** | 55 min | [Abrir 103](../lecciones/Cuadernos/103_ar_Gradientes_Actor_Critico.ipynb) |
 | 1 · 27 oct. | 2 | **104. PPO y control en Hydro-Lab** | 55 min | [Abrir 104](../lecciones/Cuadernos/104_ar_PPO_Hydro_Lab.ipynb) |

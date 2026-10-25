@@ -1,12 +1,12 @@
 # Una red de hidrocarburos que aprende a decidir
-## Fundamentos físicos, matemáticos y de aprendizaje por refuerzo — Edición G3.3 / S2.11
+## Fundamentos físicos, matemáticos y de aprendizaje por refuerzo — Edición G3.4 / S2.11
 
 **Curso:** Inteligencia artificial avanzada aplicada a retos estratégicos
 **Universidad de los Andes · Ecopetrol**
 **Fechas:** 27 y 28 de octubre de 2026
 **Tipo de documento:** lectura preparatoria y material de consulta para estudiantes
 **Nivel:** introductorio en hidráulica; se presuponen conocimientos básicos de álgebra, funciones y probabilidad, pero **no** formación en ingeniería de petróleos.
-**Versión:** G3.3 — revisión de correspondencia con la interfaz principal de Hydro-Lab S2.11, basada en G3.2. Complementa el manual de operación.
+**Versión:** G3.4 — revisión de correspondencia con la interfaz principal de Hydro-Lab S2.11, basada en G3.3. Complementa el manual de operación.
 
 > **Idea central.** Nuestro propósito no es formar especialistas en oleoductos en ocho horas. Construiremos un mundo físico sintético, lo suficientemente comprensible para preguntarnos cómo una inteligencia artificial aprende a tomar decisiones secuenciales, cómo se optimizan configuraciones costosas de evaluar y cómo se coordinan algoritmos de aprendizaje con investigación de operaciones.
 
@@ -14,7 +14,7 @@
 
 ## Una invitación a construir sobre el laboratorio
 
-Hydro-Lab está concebido como un entorno educativo **abierto y modificable**. Además de utilizar la aplicación, puedes examinar su implementación, experimentar con controladores, diseñar nuevas recompensas y adaptar el proyecto a tus propias preguntas. El objetivo no es que aceptes los resultados del simulador como verdades industriales, sino que aprendas a formular hipótesis, contrastarlas y documentar sus límites. La licencia de código propuesta es MIT; su vigencia dependerá de la publicación del archivo `LICENSE` por el titular de derechos y de respetar las licencias de terceros. El software no está validado para controlar infraestructura real.
+Hydro-Lab está concebido como un entorno educativo **abierto y modificable**. Además de utilizar la aplicación, puedes examinar su implementación, experimentar con controladores, diseñar nuevas recompensas y adaptar el proyecto a tus propias preguntas. El objetivo no es que aceptes los resultados del simulador como verdades industriales, sino que aprendas a formular hipótesis, contrastarlas y documentar sus límites. El código original se distribuye bajo licencia MIT, publicada en el archivo `LICENSE` del repositorio; las licencias de terceros deben respetarse por separado. El software no está validado para controlar infraestructura real.
 
 ## Cómo utilizar esta guía durante el curso
 
@@ -686,7 +686,7 @@ Cada equipo entrega una ficha breve con pregunta, configuración completa, versi
 
 Los estudiantes avanzados pueden modificar el código, probar otras políticas, alterar escenarios y funciones de recompensa, incorporar algoritmos de optimización o comparar nuevos métodos de RL. Toda modificación debe documentar supuestos, conservar semillas reproducibles y comprobar su comportamiento mediante pruebas. **Una extensión posible, todavía no implementada**, es un pequeño modelo de lenguaje local que redacte análisis sobre resultados calculados y validados por un motor estadístico determinista. No se necesita un LLM para ejecutar las prácticas actuales.
 
-La licencia MIT propuesta permite reutilización amplia, incluida la comercial, una vez publicada válidamente en el repositorio. Las obligaciones de licencias de terceros permanecen vigentes.
+La licencia MIT publicada en el repositorio permite reutilización amplia, incluida la comercial, bajo sus condiciones. Las obligaciones de licencias de terceros permanecen vigentes.
 
 ## 21. Alcance y responsabilidad técnica
 

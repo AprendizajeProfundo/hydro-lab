@@ -25,7 +25,7 @@ No necesitas programar para comenzar. Las instrucciones te indicarán qué selec
 
 Hydro-Lab es una plataforma educativa de código abierto, diseñada para aprender a tomar decisiones secuenciales en un sistema físico sintético. No es una caja negra ni un producto cerrado. Quien quiera ir más allá de la interfaz puede leer el código, cambiar controladores, diseñar recompensas, añadir escenarios, comparar métodos y desarrollar soluciones propias. **Hackear Hydro-Lab, en este contexto, significa comprenderlo y transformarlo creativamente**, conservando la disciplina de pruebas reproducibles.
 
-La licencia propuesta para el código original es **MIT**, permisiva incluso para desarrollos comerciales, sujeta a la conservación de los avisos correspondientes. La licencia se hará efectiva cuando el titular de derechos publique el archivo `LICENSE` en el repositorio y se comprueben las condiciones de redistribución de los componentes de terceros. Los resultados del laboratorio son sintéticos: ninguna modificación autoriza su uso directo en infraestructura industrial sin validación y controles de seguridad independientes.
+El código original del proyecto se distribuye bajo licencia **MIT**, publicada en el archivo `LICENSE` del repositorio. Esta licencia permite reutilización amplia, incluso comercial, con las condiciones y avisos correspondientes. Los componentes de terceros conservan sus propias licencias y condiciones de redistribución. Los resultados del laboratorio son sintéticos: ninguna modificación autoriza su uso directo en infraestructura industrial sin validación y controles de seguridad independientes.
 
 ## 1. Antes de empezar: conoce la red y aprende a decidir
 
@@ -168,7 +168,7 @@ Elige **una sola** de estas alternativas. Ambas aíslan las dependencias del lab
 ```bash
 conda create -n hydro-lab python=3.12 -y
 conda activate hydro-lab
-python -m pip install -e ".[dev,ui]"
+python -m pip install -e ".[dev,ui,ppo,course]"
 ```
 
 Cuando vuelvas a abrir Hydro-Lab otro día, bastará con activar el entorno existente mediante `conda activate hydro-lab`; **no** es necesario crearlo de nuevo.
@@ -179,7 +179,7 @@ En **Windows (PowerShell)**:
 
 ```powershell
 py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e ".[dev,ui]"
+.\.venv\Scripts\python.exe -m pip install -e ".[dev,ui,ppo,course]"
 ```
 
 En **macOS o Linux**:
@@ -187,7 +187,7 @@ En **macOS o Linux**:
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e ".[dev,ui]"
+python -m pip install -e ".[dev,ui,ppo,course]"
 ```
 
 En Windows utilizamos directamente el Python del entorno para no exigir cambios en la política de ejecución de PowerShell. En macOS y Linux, `source` activa el entorno. Si Python 3.12 no se reconoce, instálalo antes de continuar.
@@ -871,7 +871,7 @@ Los brazos son `health_aware/off`, `health_aware/uncertainty`, `health_robust/of
 | Síntoma | Qué revisar | Qué hacer |
 |---|---|---|
 | `conda: command not found` | Conda no está disponible en esa terminal | Abre una terminal configurada para conda o solicita apoyo al docente |
-| `No module named streamlit` | Entorno equivocado o dependencia ausente | Activa `hydro-lab`; instala `python -m pip install -e ".[dev,ui]"` |
+| `No module named streamlit` | Entorno equivocado o dependencia ausente | Activa `hydro-lab`; instala `python -m pip install -e ".[dev,ui,ppo,course]"` |
 | `No such file or directory` al ejecutar | Carpeta de proyecto equivocada | Verifica que exista `dashboard/app.py` en el directorio actual |
 | El navegador no muestra la app | Servidor aún iniciando o URL distinta | Usa la Local URL de Terminal; comprueba que el proceso siga activo |
 | Los deslizadores están bloqueados | Controlador no manual o episodio finalizado | Selecciona Manual en barra lateral y crea un episodio nuevo |

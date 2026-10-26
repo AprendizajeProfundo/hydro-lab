@@ -1,4 +1,3 @@
-
 <p align="center">
   <img src="assets/logo-final-ap.png" alt="Aprendizaje Profundo" width="240">
 </p>
@@ -7,7 +6,7 @@
 
 **Laboratorio educativo de inteligencia artificial avanzada para una red sintética de transporte de hidrocarburos.**
 
-**Desarrollo de Hydro-Lab:** Alvaro Montenegro — Aprendizaje Profundo SAS.
+**Desarrollo de Hydro-Lab:** Álvaro Montenegro — Aprendizaje Profundo SAS.
 
 Hydro-Lab es un desarrollo de software independiente, concebido especialmente como recurso didáctico para el curso de Inteligencia Artificial Avanzada de la Universidad de los Andes y Ecopetrol.
 
@@ -17,17 +16,37 @@ El laboratorio permite estudiar decisiones secuenciales, optimización, control 
 
 ## Acceso al curso y sus materiales
 
-Los materiales académicos del curso fueron adaptados a partir de recursos educativos de Aprendizaje Profundo, desarrollados por Alvaro Montenegro, Daniel Montenegro y Pilar Montenegro.
+Los materiales académicos del curso fueron adaptados a partir de recursos educativos de Aprendizaje Profundo, desarrollados por Álvaro Montenegro, Daniel Montenegro y Pilar Montenegro.
 
 | Recurso | Acceso |
 |---|---|
-| Programa académico | [Syllabus del curso](docs/01_curso/syllabus/Syllabus_IA_Avanzada_Ecopetrol_Uniandes_G2.4.md) |
-| Lecciones prácticas | [Ocho cuadernos Jupyter (101–108)](docs/01_curso/lecciones/Cuadernos/) |
+| Programa académico | [Syllabus G2.5](docs/01_curso/syllabus/Syllabus_IA_Avanzada_Ecopetrol_Uniandes_G2.5.md) |
+| Lecciones prácticas | [Diez cuadernos Jupyter: ocho principales y dos complementarios](docs/01_curso/lecciones/Cuadernos/) |
+| Recursos visuales | [Imágenes y GIFs de las lecciones](docs/01_curso/lecciones/Imagenes/) |
 | Laboratorio | [Manual de Hydro-Lab S2.11](docs/03_laboratorio/manuales/Manual_Hydro_Lab_S2.11_G3.1.md) |
 | Fundamentos y actividades | [Guía de estudiantes](docs/03_laboratorio/manuales/Guia_Estudiantes_Hydro_Lab_S2.11_G3.4.md) |
 | Documentación general | [Índice de documentación](docs/README.md) |
 
+### Índice de cuadernos Jupyter
+
+Las lecciones 101–108 mantienen la secuencia docente principal. Las lecciones **102A** y **103A** son complementos oficiales de profundización: pueden utilizarse durante la clase, sin añadir horas al programa.
+
+| Sesión | Cuaderno | Tema | Función |
+|---|---|---|---|
+| 1 | [101](docs/01_curso/lecciones/Cuadernos/101_ar_MDP_Fundamentos.ipynb) | Fundamentos de MDP | Principal |
+| 1 | [102](docs/01_curso/lecciones/Cuadernos/102_ar_Q_Learning_DQN.ipynb) | Q-learning y DQN | Principal |
+| 1 | [102A](docs/01_curso/lecciones/Cuadernos/102A_ar_Deep_Q_Learning_Experiencias.ipynb) | Deep Q-Learning: aprender de la experiencia | Complementario |
+| 2 | [103](docs/01_curso/lecciones/Cuadernos/103_ar_Gradientes_Actor_Critico.ipynb) | Gradientes de política y Actor-Crítico | Principal |
+| 2 | [103A](docs/01_curso/lecciones/Cuadernos/103A_ar_Actor_Critico_PPO.ipynb) | Actor-Crítico y PPO | Complementario |
+| 2 | [104](docs/01_curso/lecciones/Cuadernos/104_ar_PPO_Hydro_Lab.ipynb) | PPO y control en Hydro-Lab | Principal |
+| 3 | [105](docs/01_curso/lecciones/Cuadernos/105_ar_Optimizacion_Bayesiana.ipynb) | Optimización bayesiana | Principal |
+| 3 | [106](docs/01_curso/lecciones/Cuadernos/106_ar_Optimizacion_Multiobjetivo.ipynb) | Optimización multiobjetivo | Principal |
+| 4 | [107](docs/01_curso/lecciones/Cuadernos/107_ar_Meta_Learning.ipynb) | Meta-learning | Principal |
+| 4 | [108](docs/01_curso/lecciones/Cuadernos/108_ar_RL_Investigacion_Operaciones.ipynb) | RL e Investigación de Operaciones | Principal |
+
 Los cuadernos pueden consultarse directamente en GitHub. Para ejecutarlos se requiere un entorno Jupyter con las dependencias correspondientes. La visualización de un cuaderno en GitHub no ejecuta sus celdas.
+
+Los recursos gráficos incluyen imágenes PNG y animaciones GIF; algunos cuadernos pueden conservar espacios reservados para insertar visualizaciones pendientes. La presencia de un archivo en `Imagenes/` no implica que ya esté incrustado en el cuaderno correspondiente.
 
 El curso utiliza los cuadernos como material conceptual y práctico. Hydro-Lab constituye el entorno experimental complementario para estudiar el comportamiento de una red simulada y comparar estrategias de decisión.
 
@@ -47,9 +66,7 @@ La aplicación está desarrollada en Python y utiliza Streamlit como interfaz lo
 
 ## Obtener el repositorio
 
-Repositorio oficial:
-
-https://github.com/AprendizajeProfundo/hydro-lab
+Repositorio oficial: [AprendizajeProfundo/hydro-lab](https://github.com/AprendizajeProfundo/hydro-lab).
 
 Puedes descargarlo mediante **Code → Download ZIP** desde GitHub o clonarlo:
 
@@ -104,13 +121,7 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m streamlit run dashboard/app.py
 ```
 
-La interfaz estará disponible normalmente en:
-
-http://localhost:8501
-
-Para detener la aplicación, utiliza **Ctrl+C** en la terminal.
-
-## Dependencias
+La interfaz estará disponible normalmente en [http://localhost:8501](http://localhost:8501). Para detener la aplicación, utiliza **Ctrl+C** en la terminal.
 
 ## Dependencias
 
@@ -130,8 +141,7 @@ Para instalar el laboratorio completo y todas las dependencias del curso:
 python -m pip install -e ".[dev,ui,ppo,course]"
 ```
 
-Esta configuración incluye las bibliotecas identificadas mediante la auditoría de importaciones de los ocho cuadernos del curso. La instalación fue verificada en el entorno de desarrollo con Python 3.12, sin conflictos de dependencias y con 125 pruebas automatizadas aprobadas.
-
+La instalación del entorno S2.11 fue verificada previamente con Python 3.12 y 125 pruebas automatizadas aprobadas. Las nuevas lecciones 102A y 103A requieren su propia verificación de ejecución antes de afirmar que toda la ampliación ha sido validada.
 
 ## Entrenamiento y evaluación PPO
 
@@ -145,7 +155,7 @@ Una ejecución aislada no demuestra la superioridad de una política. Las compar
 
 La suite automatizada está disponible en [`tests/`](tests/).
 
-En la revisión local de S2.11 se ejecutaron satisfactoriamente **125 pruebas**. Este resultado no implica por sí mismo compatibilidad certificada con todas las plataformas.
+En la revisión local previa de S2.11 se ejecutaron satisfactoriamente **125 pruebas**. Este resultado no implica por sí mismo compatibilidad certificada con todas las plataformas ni validación de los cuadernos incorporados posteriormente.
 
 Los resultados y checkpoints se generan localmente. La carpeta `resultados/` está excluida del control de versiones.
 
@@ -161,9 +171,9 @@ Los identificadores de generación y versión se conservan para documentar la ev
 
 ## Autoría y reconocimientos
 
-**Hydro-Lab:** diseño y desarrollo por Alvaro Montenegro, Aprendizaje Profundo SAS.
+**Hydro-Lab:** diseño y desarrollo por Álvaro Montenegro, Aprendizaje Profundo SAS.
 
-**Materiales académicos:** los cuadernos del curso constituyen adaptaciones de materiales de Aprendizaje Profundo, con autoría atribuida a Alvaro Montenegro, Daniel Montenegro y Pilar Montenegro.
+**Materiales académicos:** los cuadernos del curso constituyen adaptaciones de materiales de Aprendizaje Profundo, con autoría atribuida a Álvaro Montenegro, Daniel Montenegro y Pilar Montenegro.
 
 **Ilustraciones:** las imágenes originales fueron elaboradas por los autores; algunas se produjeron con asistencia de ChatGPT. Los recursos de terceros, cuando existan, mantienen sus atribuciones y condiciones particulares.
 
@@ -173,7 +183,7 @@ La referencia al curso de la Universidad de los Andes y Ecopetrol identifica su 
 
 Los componentes originales del repositorio sobre los que sus titulares poseen derechos licenciables se distribuyen bajo la **licencia MIT**. Consulta el archivo [`LICENSE`](LICENSE).
 
-Los cuadernos 101–108 cuentan además con un [aviso específico de licencia y alcance](docs/01_curso/lecciones/Cuadernos/LICENSE_Cuadernos_Curso.txt).
+Los cuadernos 101–108 cuentan con un [aviso específico de licencia y alcance](docs/01_curso/lecciones/Cuadernos/LICENSE_Cuadernos_Curso.txt). Debe verificarse expresamente si dicho aviso también comprende los nuevos cuadernos 102A y 103A.
 
 La licencia del proyecto no modifica los derechos sobre materiales, bibliotecas, marcas, imágenes o contenidos de terceros.
 
